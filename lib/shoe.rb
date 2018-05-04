@@ -14,7 +14,7 @@ class Shoe
 
   def brand=(brand)
     @brand = brand
-    if BRANDS.find {|brand| @brand} == nil
+    if BRANDS.none? {|brand| @brand}
     BRANDS << brand
     end
   end
